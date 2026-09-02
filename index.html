@@ -18,7 +18,7 @@
       <li><a href="#experience">经历</a></li>
       <li><a href="#projects">作品</a></li>
       <li><a href="#skills">技能</a></li>
-      <li><a href="#data">求职数据</a></li>
+      <li><a href="#output">产出</a></li>
       <li><a href="#contact">联系</a></li>
     </ul>
     <button class="theme-toggle" id="theme-toggle" aria-label="切换主题"></button>
@@ -46,8 +46,8 @@
 <div class="stats">
   <div class="stat"><div class="val">4</div><div class="lbl">段实习经历</div></div>
   <div class="stat"><div class="val">7</div><div class="lbl">个作品项目</div></div>
-  <div class="stat"><div class="val" id="hero-total">57</div><div class="lbl">条秋招投递</div></div>
   <div class="stat"><div class="val">985</div><div class="lbl">本硕院校</div></div>
+  <div class="stat"><div class="val">99.5%</div><div class="lbl">数据治理准确率</div></div>
 </div>
 
 <!-- ============ About ============ -->
@@ -260,46 +260,20 @@
   </div>
 </section>
 
-<!-- ============ 求职数据可视化 ============ -->
-<section class="section" id="data">
+<!-- ============ 产出展示 ============ -->
+<section class="section" id="output">
   <div class="section-header">
-    <div class="eyebrow">Job Hunt · Live Data</div>
-    <h2>求职数据可视化</h2>
-    <p>2026.06 – 08 秋招进行中，用真实投递记录说话（数据随记录自动更新）。</p>
+    <div class="eyebrow">Output</div>
+    <h2>产出展示</h2>
+    <p>实习与项目的成果沉淀，先放一张总览图，后续持续补充。</p>
   </div>
-
-  <div class="charts">
-    <div class="chart-card chart-half">
-      <h3>投递趋势</h3>
-      <div class="chart-root" data-chart="trend"></div>
-      <p class="chart-note">每月新增投递量 · 7月为集中投递期</p>
-    </div>
-    <div class="chart-card chart-half">
-      <h3>投递类型占比</h3>
-      <div class="chart-root" data-chart="types"></div>
-      <p class="chart-note">秋招为主，兼顾日常与暑期实习</p>
-    </div>
-    <div class="chart-card">
-      <h3>进展漏斗</h3>
-      <div class="chart-root" data-chart="funnel"></div>
-      <p class="chart-note">取各投递当前最新状态（非流水线通过数）· 终止 1 条</p>
-    </div>
-    <div class="chart-card">
-      <h3>目标公司分布</h3>
-      <div class="chart-root" data-chart="companies"></div>
-      <p class="chart-note">腾讯系投递最多，其余 32 家折叠为「其他」</p>
+  <div class="output-frame">
+    <div class="output-placeholder">
+      <div class="op-num">01</div>
+      <p>产出总览图占位</p>
+      <p class="op-sub">替换为你的实习 / 项目产出图（截图、看板、架构图、Demo 视频封面等）</p>
     </div>
   </div>
-
-  <details class="data-table">
-    <summary>查看全部投递记录（<span id="table-count">—</span> 条）</summary>
-    <table>
-      <thead>
-        <tr><th>日期</th><th>公司</th><th>岗位</th><th>类型</th><th>状态</th></tr>
-      </thead>
-      <tbody id="records-tbody"></tbody>
-    </table>
-  </details>
 </section>
 
 <!-- ============ Footer ============ -->
@@ -316,11 +290,6 @@
 
 </main>
 
-<script type="application/json" id="homepage-job-data">
-[{"company":"腾讯-天美工作室群","position":"研发支持中心 AI 应用开发实习生","type":"暑期实习","date":"2026-06-18","status":"已投递"},{"company":"腾讯-洛克手游","position":"洛克 AI 产品实习生（AI 评测方向）","type":"暑期实习","date":"2026-06-18","status":"已投递"},{"company":"腾讯-财经业务线","position":"AI 应用开发岗","type":"暑期实习","date":"2026-06-18","status":"已投递"},{"company":"腾讯-金融科技（微信手机充值）","position":"产品策划实习生","type":"日常实习","date":"2026-06-18","status":"终止"},{"company":"腾讯音乐（TME）","position":"数据产品实习生","type":"暑期实习","date":"2026-06-22","status":"一面"},{"company":"腾讯-IEG·AI Muse Lab","position":"AI产品暑期实习生（AI视频广告生产工具）","type":"暑期实习","date":"2026-06-28","status":"已投递"},{"company":"大疆（DJI）","position":"数字化产品经理（深圳）","type":"秋招","date":"2026-07-13","status":"测试"},{"company":"百度","position":"AI产品经理","type":"秋招","date":"2026-07-16","status":"已投递"},{"company":"字节跳动","position":"HR招聘实习生-飞书AI研发招聘","type":"日常实习","date":"2026-07-16","status":"一面"},{"company":"顺丰集团-数智化应用组","position":"数据+AI Agent方向实习生","type":"日常实习","date":"2026-07-18","status":"已投递"},{"company":"腾讯-IEG","position":"AI产品实习生（语言模型方向）","type":"日常实习","date":"2026-07-18","status":"已投递"},{"company":"腾讯-IEG","position":"AI产品实习生（内容识别/推荐业务方向）","type":"日常实习","date":"2026-07-18","status":"已投递"},{"company":"美团-无人机业务部","position":"无人机配送-AI数据产品实习生","type":"日常实习","date":"2026-07-22","status":"已投递"},{"company":"腾讯游戏","position":"商业分析日常实习生（AI 方向）","type":"日常实习","date":"2026-07-22","status":"已投递"},{"company":"网易互娱","position":"AI数据分析师","type":"秋招","date":"2026-07-27","status":"已投递"},{"company":"网易互娱","position":"大模型产品经理","type":"秋招","date":"2026-07-27","status":"已投递"},{"company":"MiniMax（稀宇科技）","position":"AI Talent Partner","type":"秋招","date":"2026-07-27","status":"已投递"},{"company":"MiniMax（稀宇科技）","position":"AI 架构实习生","type":"秋招","date":"2026-07-27","status":"面试结束（待结果）"},{"company":"影石（Insta360）","position":"AI应用产品管培生-2027校招","type":"秋招","date":"2026-07-28","status":"已投递"},{"company":"蔚来（NIO）","position":"AI数据产品经理（提前批）","type":"秋招","date":"2026-07-29","status":"测试"},{"company":"蔚来（NIO）","position":"AI产品经理-创新产品（提前批）","type":"秋招","date":"2026-07-29","status":"测试"},{"company":"蔚来（NIO）","position":"AI产品经理-领域应用（提前批）","type":"秋招","date":"2026-07-29","status":"测试"},{"company":"VIVO","position":"互联网产品经理（策略方向）-27届秋招","type":"秋招","date":"2026-08-15","status":"测评已完成"},{"company":"万得（Wind）","position":"待定（暂无合适岗位）","type":"秋招","date":"2026-07-29","status":"待投递"},{"company":"百度","position":"上海-用户产品经理(J101084)","type":"秋招","date":"2026-07-21","status":"简历筛选"},{"company":"蚂蚁集团","position":"待定（暂无合适岗位）","type":"秋招","date":"2026-07-29","status":"待投递"},{"company":"拓竹科技","position":"CyberBrick 产品经理 - 软件AI方向","type":"秋招","date":"2026-08-11","status":"已投递"},{"company":"高途","position":"待定（暂无合适岗位）","type":"秋招","date":"2026-07-29","status":"待投递"},{"company":"学而思","position":"待定（暂无合适岗位）","type":"秋招","date":"2026-07-29","status":"待投递"},{"company":"拼多多","position":"待定（暂无合适岗位）","type":"秋招","date":"2026-07-29","status":"待投递"},{"company":"智元机器人","position":"产品经理","type":"秋招","date":"2026-07-29","status":"已投递"},{"company":"智元机器人","position":"AI 模型运营工程师","type":"秋招","date":"2026-07-29","status":"已投递"},{"company":"智元机器人","position":"AI 产品经理助理","type":"秋招","date":"2026-07-29","status":"已投递"},{"company":"智元机器人","position":"数据和 AI 开发工程师（流程 IT）","type":"秋招","date":"2026-07-29","status":"已投递"},{"company":"科大讯飞","position":"AI产品经理","type":"秋招","date":"2026-07-29","status":"测评已完成"},{"company":"科大讯飞","position":"大模型数据项目经理","type":"秋招","date":"2026-07-29","status":"一面"},{"company":"OPPO","position":"互联网产品经理（AI方向）","type":"秋招","date":"2026-08-04","status":"笔试"},{"company":"OPPO","position":"财务管理经理（AI方向）","type":"秋招","date":"2026-08-04","status":"已投递"},{"company":"卓驭","position":"多模态大模型数据与评测算法岗（领航者校招）","type":"秋招","date":"2026-08-04","status":"已投递"},{"company":"京东","position":"技术产品经理","type":"秋招","date":"2026-08-06","status":"笔试已完成"},{"company":"米哈游","position":"AI产品经理","type":"秋招","date":"2026-08-06","status":"已投递"},{"company":"远景","position":"AI产品工程师（流程机制方向）","type":"秋招","date":"2026-08-06","status":"测评已完成"},{"company":"帆软","position":"产品经理","type":"秋招","date":"2026-08-06","status":"HR面"},{"company":"帆软","position":"产品运营","type":"秋招","date":"2026-08-06","status":"已投递"},{"company":"长鑫科技","position":"AI产品经理","type":"秋招","date":"2026-08-10","status":"测评已完成"},{"company":"微博","position":"互联网产品经理（策略方向）","type":"秋招","date":"2026-08-11","status":"已投递"},{"company":"凡岛","position":"AI技术经理（校招）","type":"秋招","date":"2026-08-12","status":"已投递"},{"company":"沐瞳科技","position":"平台产品经理（AI）","type":"秋招","date":"2026-08-12","status":"已投递"},{"company":"字节跳动","position":"经营分析","type":"秋招","date":"2026-08-15","status":"一面"},{"company":"舜宇光学科技（集团）有限公司","position":"业务支持（深圳）","type":"秋招","date":"2026-08-25","status":"已投递"},{"company":"鸿擎科技","position":"AI 应用实习生（Prompt 工程 / AI 交互规范方向）","type":"秋招","date":"2026-08-25","status":"已投递"},{"company":"沐瞳科技","position":"AI Agent 产品经理（平台）","type":"秋招","date":"2026-08-25","status":"已投递"},{"company":"波克集团","position":"2027届秋招-AI产品经理","type":"秋招","date":"2026-08-25","status":"已投递"},{"company":"睿创微纳","position":"智能体测评师","type":"秋招","date":"2026-08-25","status":"已投递"},{"company":"睿创微纳","position":"产品经理","type":"秋招","date":"2026-08-25","status":"已投递"},{"company":"合合信息","position":"AI产品经理","type":"日常实习","date":"2026-08-26","status":"一面"},{"company":"腾讯","position":"财务线培训生（专业类）","type":"秋招","date":"2026-08-27","status":"一面"}]
-
-</script>
-<div class="chart-tip" id="chart-tip" role="tooltip"></div>
 <script src="js/main.js"></script>
 </body>
 </html>
