@@ -25,6 +25,70 @@
   matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyThemeBtn);
   applyThemeBtn();
 
+  /* ---------- 本地编辑模式 ---------- */
+  function initEditMode() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('edit') !== '1') return;
+
+    document.body.classList.add('edit-mode');
+    const editTargets = document.querySelectorAll([
+      '.hero h1', '.hero .role', '.hero .bio',
+      '.fit-card span', '.stat .val', '.stat .lbl',
+      '.section-header h2', '.section-header p',
+      '.about-card h3', '.about-card p',
+      '.tl-item h3', '.tl-item p', '.tl-role',
+      '.featured-case h3', '.featured-case p', '.featured-result span', '.featured-result strong',
+      '.case-grid span', '.case-grid p',
+      '.metric .m-val', '.metric .m-lbl',
+      '.proj-item-body h3', '.proj-desc', '.proj-outcome',
+      '.proj-tags span', '.skill-tag', '.sg-label', '.skill-row p',
+      '.award-chip', '.footer p', '.contact-row a'
+    ].join(','));
+
+    editTargets.forEach(function (element) {
+      element.setAttribute('contenteditable', 'true');
+      element.setAttribute('spellcheck', 'false');
+    });
+
+    const bar = document.createElement('div');
+    bar.className = 'editor-bar';
+    bar.id = 'editor-bar';
+    bar.innerHTML = '<span>编辑模式已开启</span><button type="button" id="save-page">保存到本地文件</button><a href="./?v=split-oppo-live">退出编辑</a>';
+    document.body.appendChild(bar);
+
+    function buildCleanHtml() {
+      const clone = document.documentElement.cloneNode(true);
+      clone.removeAttribute('data-theme');
+      clone.querySelectorAll('#editor-bar,.lightbox-wrap').forEach(function (node) { node.remove(); });
+      clone.querySelectorAll('[contenteditable]').forEach(function (node) {
+        node.removeAttribute('contenteditable');
+        node.removeAttribute('spellcheck');
+      });
+      const body = clone.querySelector('body');
+      if (body) body.classList.remove('edit-mode');
+      return '<!DOCTYPE html>\n' + clone.outerHTML + '\n';
+    }
+
+    document.getElementById('save-page').addEventListener('click', function () {
+      const btn = this;
+      btn.disabled = true;
+      btn.textContent = '保存中...';
+      fetch('/__save-page', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ html: buildCleanHtml() })
+      }).then(function (res) {
+        if (!res.ok) throw new Error('保存失败');
+        btn.textContent = '已保存';
+        setTimeout(function () { btn.textContent = '保存到本地文件'; btn.disabled = false; }, 1200);
+      }).catch(function () {
+        btn.textContent = '保存失败';
+        setTimeout(function () { btn.textContent = '保存到本地文件'; btn.disabled = false; }, 1600);
+      });
+    });
+  }
+  initEditMode();
+
   /* ---------- 移动导航 ---------- */
   const navBtn = document.querySelector('.nav-toggle');
   const navLinks = document.getElementById('nav-links');
