@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investment X Buddy · 研究 Agent 工作台 · 彭远超</title>
+<meta name="description" content="彭远超，2027届。关注 AI 应用与数据运营，展示 Agent、模型评测、数据治理与业务自动化实践。">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<nav class="nav" id="top">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">彭远超<span class="nav-logo-sub">/ portfolio</span>
+</a>
+<button class="nav-toggle" aria-label="菜单" aria-controls="nav-links" aria-expanded="false">☰</button>
+<div class="nav-links" id="nav-links">
+<a href="index.html#projects">← 返回作品首页</a>
+</div>
+<button class="theme-toggle" id="theme-toggle" aria-label="切换主题">
+</button>
+</div>
+</nav>
+<main class="container detail-page" id="main">
+<header class="detail-heading">
+<p class="eyebrow">自主原型 · 2026.10</p>
+<h1>投资研究 Agent 工作台</h1>
+<p>从研究目标到证据与报告，探索可检查的人机协同流程。</p>
+</header>
+<article class="proj-item" id="investment-x-buddy">
+      <div class="proj-item-head">
+<span class="proj-num">01</span>
+<span class="proj-tag">同花顺笔试实战 · 产品原型 · 2026.10</span>
+</div>
+      <div class="proj-item-body">
+        <h3>Investment X Buddy · 投资研究 Agent 工作台</h3>
+        <p class="proj-desc">面向有基础金融知识、希望借助 AI 完成初步研究的个人用户，探索把“提出问题、拆解任务、收集数据、核对依据、形成报告”组织为连续的研究流程。基于同花顺笔试任务，借助 AI 编程工具完成原型搭建，重点验证研究过程的呈现方式与人机协同设计。</p>
+        <figure class="proj-img">
+          <img class="lightbox-trigger" src="assets/img/xbuddy-maotai-analysis.png" alt="Investment X Buddy 贵州茅台估值与风险分析完整长图：研究问题、估值指标、行情与财务图表、研究报告、风险限制、证据引用及 Agent Monitor" loading="lazy" width="2400" height="2556" style="width:100%;height:auto;display:block">
+          <figcaption class="viz-note">贵州茅台估值与风险分析实际案例：从研究问题、数据图表到完整报告、风险限制与证据引用，右侧展示 Agent 运行监控。点击图片放大查看。</figcaption>
+        </figure>
+        <h4 class="viz-title">设计思路：把一次提问组织成可检查的研究过程</h4>
+        <div class="case-grid compact">
+          <div>
+<span>01 · 问题定义：研究过程容易断开</span>
+<p>初步研究通常需要在问答、行情图表和资料之间切换。围绕“了解一家公司的经营与估值”这样的目标，产品假设是：把任务、数据和结论放进同一研究线程，有助于减少整理过程中的信息丢失。该假设仍需真实用户验证。</p>
+</div>
+          <div>
+<span>02 · 人机分工：先确认方向，再执行</span>
+<p>一个研究目标可能存在多种拆解方式。先展示计划与工具范围，让用户检查研究对象和任务方向，再确认执行；用一次明确的确认减少方向偏离，同时也需要关注确认步骤是否带来额外负担。</p>
+</div>
+          <div>
+<span>03 · 信任设计：让结论有据可查</span>
+<p>报告需要同时呈现数据来源、证据与缺失信息，帮助用户区分已有事实和需要进一步判断的部分。图表和报告围绕同一组证据组织；缺少字段时保留缺口，让用户知道哪些问题尚未得到回答。</p>
+</div>
+          <div>
+<span>04 · 信息架构：按用户任务组织界面</span>
+<p>通过研究线程管理不同主题，在 Research 中阅读结果，在 Plan 中查看步骤，在 Trace 中检查执行过程。将日常阅读与过程排查分开呈现，尝试兼顾首次使用的理解成本和深入检查的需要。</p>
+</div>
+          <div>
+<span>05 · 工程取舍：优先跑通核心流程</span>
+<p>先完成“目标—计划—确认—执行—证据—报告”的前后端闭环，再逐步完善数据接入和异常处理。将研究记录、状态与检查点保存下来，为刷新后查看进度、恢复未完成研究提供基础。</p>
+</div>
+          <div>
+<span>06 · 异常体验：保留已有进展</span>
+<p>数据缺失或工具失败时，用户需要知道已完成什么、缺少什么，以及可以如何继续。设计上保留成功结果，呈现失败与部分完成状态，并逐步完善恢复和失败项重试，减少重复操作与不必要的数据调用。</p>
+</div>
+        </div>
+        <h4 class="viz-title">从研究目标到可检查的结果</h4>
+        <div class="viz-flow" aria-label="研究流程：输入目标、查看计划、确认执行、获取数据、查看证据与报告">
+          <div class="flow-node">输入目标</div>
+<div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-node">查看计划</div>
+<div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-node">确认执行</div>
+<div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-node">获取数据</div>
+<div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-node">证据与报告</div>
+        </div>
+        <h4 class="viz-title">下一步：用任务完成情况验证设计</h4>
+        <p class="proj-desc">后续计划围绕具体研究任务进行体验验证：用户能否理解并确认计划、找到报告的数据依据，以及在任务失败后继续操作。结合任务完成率、人工修改次数和失败后的恢复情况，判断应优先优化研究质量、界面引导还是执行稳定性；这些是后续验证方向，尚未形成实测指标。</p>
+        <div class="proj-tags">
+<span>Agent 流程设计</span>
+<span>人机协同</span>
+<span>证据溯源</span>
+<span>AI 辅助开发</span>
+</div>
+        <p class="viz-note">原型展示：演示数据与真实数据以页面来源标识为准；当前版本的功能与稳定性仍在迭代中。</p>
+        <div class="hero-actions" aria-label="Investment X Buddy 项目入口">
+          <a class="hero-action primary" href="https://relaxed-cuchufli-47f2fa.netlify.app/" target="_blank" rel="noopener noreferrer">体验原型 ↗</a>
+          <a class="hero-action" href="https://github.com/PYC1234/investment-x-buddy" target="_blank" rel="noopener noreferrer">查看项目源码 ↗</a>
+        </div>
+      </div>
+    </article>
+<footer class="footer" id="contact">
+<p class="f-title">
+<strong>欢迎联系</strong>
+</p>
+<p class="f-sub">关注 AI 应用与数据运营机会 · 2027 届 · 大湾区、江浙沪</p>
+<div class="contact-row">
+<a href="mailto:yuanchao29zoe@163.com">邮件联系</a>
+<a href="tel:13212511091">13212511091</a>
+<a href="https://github.com/PYC1234" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+<a href="assets/resume.pdf" download="彭远超-个人简历.pdf">下载简历 PDF</a>
+</div>
+<p class="copy">彭远超 · AI 应用与数据运营</p>
+</footer>
+</main>
+<script src="js/site.js">
+</script>
+</body>
+</html>

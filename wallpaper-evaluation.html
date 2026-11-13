@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 壁纸评级与模型评测 · 彭远超</title>
+<meta name="description" content="彭远超，2027届。关注 AI 应用与数据运营，展示 Agent、模型评测、数据治理与业务自动化实践。">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<nav class="nav" id="top">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">彭远超<span class="nav-logo-sub">/ portfolio</span>
+</a>
+<button class="nav-toggle" aria-label="菜单" aria-controls="nav-links" aria-expanded="false">☰</button>
+<div class="nav-links" id="nav-links">
+<a href="index.html#projects">← 返回作品首页</a>
+</div>
+<button class="theme-toggle" id="theme-toggle" aria-label="切换主题">
+</button>
+</div>
+</nav>
+<main class="container detail-page" id="main">
+<header class="detail-heading">
+<p class="eyebrow">OPPO · 实习案例</p>
+<h1>AI 壁纸评级与评测闭环</h1>
+<p>将人工经验拆成可复现的评测任务，为内容运营提供质量依据。</p>
+</header>
+<article class="featured-case">
+<h2>问题与个人工作</h2>
+<p>壁纸素材评级依赖人工判断，需要统一质量标准，并关注误伤与低质内容漏放。</p>
+<div class="case-grid">
+<div>
+<span>评测设计</span>
+<p>以人工标注为参照，输出 Accuracy、Precision、Recall、F1 与混淆矩阵；单独跟踪高风险误伤。</p>
+</div>
+<div>
+<span>迭代方法</span>
+<p>固定基准样本和 Prompt 版本，按错误案例分析边界，小步修改后在同样本上复测。</p>
+</div>
+<div>
+<span>工程支持</span>
+<p>多进程批跑、限流、缓存与断点续跑，支持模型、投票与 Prompt 对照。</p>
+</div>
+<div>
+<span>交付产物</span>
+<p>生成可复核的 HTML 报告和 AI / 人工对比表，支撑运营与审核判断。</p>
+</div>
+</div>
+<h2>分维度结果</h2>
+<div class="table-scroll">
+<table>
+<caption>经历记录中的迭代前后结果</caption>
+<thead>
+<tr>
+<th>评级维度</th>
+<th>迭代前</th>
+<th>迭代后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>低质卡通动漫准确率</td>
+<td>89%</td>
+<td>95%</td>
+</tr>
+<tr>
+<td>不予分发准确率</td>
+<td>95%</td>
+<td>99%</td>
+</tr>
+<tr>
+<td>定向分发准确率</td>
+<td>97%</td>
+<td>99.5%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="viz-note">另据经历记录，全局误伤降至 0.5%。不同维度使用各自评测口径，不合并为单一整体准确率。公开资料未列出样本量、统计周期与完整分母，因此以上仅作为项目记录结果，不推断线上全量效果。</p>
+</article>
+<article class="proj-item">
+<h2>另一项实践：Push 实验分析</h2>
+<p>比较免费主题池与付费资源下发的应用率、CTR，并检查实验分流是否有效。</p>
+<p>实验窗口内，实验组日均应用率约 0.0034%，对照组约 0.0023%，相对差异约 +48%；CTR 约为 0.34% 与 0.42%。</p>
+<p class="viz-note">该结果属于独立的 Push 实验，不是壁纸评级的业务提升。部分日期计划未生效、分流偏斜，需要切分窗口解读；不能把观察到的组间差异直接认定为因果效果。公开记录未提供置信区间与显著性结论。</p>
+</article>
+<footer class="footer" id="contact">
+<p class="f-title">
+<strong>欢迎联系</strong>
+</p>
+<p class="f-sub">关注 AI 应用与数据运营机会 · 2027 届 · 大湾区、江浙沪</p>
+<div class="contact-row">
+<a href="mailto:yuanchao29zoe@163.com">邮件联系</a>
+<a href="tel:13212511091">13212511091</a>
+<a href="https://github.com/PYC1234" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+<a href="assets/resume.pdf" download="彭远超-个人简历.pdf">下载简历 PDF</a>
+</div>
+<p class="copy">彭远超 · AI 应用与数据运营</p>
+</footer>
+</main>
+<script src="js/site.js">
+</script>
+</body>
+</html>
