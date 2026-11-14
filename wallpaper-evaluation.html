@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 壁纸评级与模型评测 · 彭远超</title>
+<title>用 AI 辅助判断壁纸内容质量 · 彭远超</title>
 <meta name="description" content="彭远超，2027届。关注 AI 应用与业务流程优化，围绕企业数据处理、内容运营与研究辅助，探索场景识别、方案设计、应用搭建和效果验证。">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/site.css">
@@ -26,7 +26,7 @@
 <main class="container detail-page" id="main">
 <header class="detail-heading">
 <p class="eyebrow">OPPO · 实习案例</p>
-<h1>AI 壁纸评级与评测闭环</h1>
+<h1>用 AI 辅助判断壁纸内容质量</h1>
 <p>将人工经验拆成可复现的评测任务，为内容运营提供质量依据。</p>
 </header>
 <article class="featured-case">
@@ -50,36 +50,9 @@
 <p>生成可复核的 HTML 报告和 AI / 人工对比表，支撑运营与审核判断。</p>
 </div>
 </div>
-<h2>分维度结果</h2>
-<div class="table-scroll">
-<table>
-<caption>经历记录中的迭代前后结果</caption>
-<thead>
-<tr>
-<th>评级维度</th>
-<th>迭代前</th>
-<th>迭代后</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>低质卡通动漫准确率</td>
-<td>89%</td>
-<td>95%</td>
-</tr>
-<tr>
-<td>不予分发准确率</td>
-<td>95%</td>
-<td>99%</td>
-</tr>
-<tr>
-<td>定向分发准确率</td>
-<td>97%</td>
-<td>99.5%</td>
-</tr>
-</tbody>
-</table>
-</div>
+<h2>减少误判，让自动化判断更可靠</h2>
+<p>在已有准确率基础上，结合错误案例分析与 Prompt 迭代，进一步减少模型判断错误。</p>
+<div class="error-chart"><p class="chart-key">错误率（越低越好） · 灰色：迭代前 / 橄榄色：迭代后</p><div class="error-row"><h3>低质卡通动漫<span>错误率相对下降约 55%</span></h3><div class="error-bar"><i style="width:91.67%"></i><span>迭代前 11%</span></div><div class="error-bar improved"><i style="width:41.67%"></i><span>迭代后 5%</span></div></div><div class="error-row"><h3>不予分发<span>错误率相对下降约 80%</span></h3><div class="error-bar"><i style="width:41.67%"></i><span>迭代前 5%</span></div><div class="error-bar improved"><i style="width:8.33%"></i><span>迭代后 1%</span></div></div><div class="error-row"><h3>定向分发<span>错误率相对下降约 83%</span></h3><div class="error-bar"><i style="width:25.00%"></i><span>迭代前 3%</span></div><div class="error-bar improved"><i style="width:4.17%"></i><span>迭代后 0.5%</span></div></div></div><div class="table-scroll"><table><caption>准确率原始结果与错误率变化</caption><thead><tr><th>评级维度</th><th>准确率变化</th><th>错误率变化</th><th>错误率相对下降</th></tr></thead><tbody><tr><td>低质卡通动漫</td><td>89% → 95%</td><td>11% → 5%</td><td>约 55%</td></tr><tr><td>不予分发</td><td>95% → 99%</td><td>5% → 1%</td><td>约 80%</td></tr><tr><td>定向分发</td><td>97% → 99.5%</td><td>3% → 0.5%</td><td>约 83%</td></tr></tbody></table></div><p class="viz-note">错误率按 1 − 准确率计算；相对降幅按（迭代前错误率 − 迭代后错误率）÷ 迭代前错误率计算。它表示评测中的判断错误，不等同于业务误伤率。前后比较以一致样本与统计口径为前提。</p>
 <p class="viz-note">另据经历记录，全局误伤降至 0.5%。不同维度使用各自评测口径，不合并为单一整体准确率。公开资料未列出样本量、统计周期与完整分母，因此以上仅作为项目记录结果，不推断线上全量效果。</p>
 </article>
 <article class="proj-item">
