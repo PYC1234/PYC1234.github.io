@@ -75,6 +75,8 @@ a { text-underline-offset:5px; }
 .detail-page .featured-case, .detail-page .proj-item { border-radius:4px; box-shadow:none; backdrop-filter:none; background:var(--surface); }
 .featured-case::before { display:none; }
 .case-grid { background:var(--page); border-radius:2px; }
+.experience-list .separate-project { grid-column:2; grid-row:auto; font-size:13px; color:var(--ink-2); border-left:2px solid var(--line); padding-left:14px; }
+@media(max-width:640px) { .experience-list .separate-project { margin-top:14px; } }
 .selected-grid .proj-item:first-child { grid-column:auto; display:flex; }
 .selected-grid .proj-item:first-child .work-cover { aspect-ratio:16 / 10; }
 .work-cover img[src$=".svg"] { width:100%; height:100%; object-fit:contain; box-shadow:none; }
