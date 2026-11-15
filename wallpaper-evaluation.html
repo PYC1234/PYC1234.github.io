@@ -28,7 +28,7 @@
 <p class="eyebrow">OPPO · 实习案例</p>
 <h1>用 AI 辅助判断壁纸内容质量</h1>
 <p>将人工经验拆成可复现的评测任务，为内容运营提供质量依据。</p>
-</header>
+</header><aside class="case-summary" aria-label="项目职责与交付"><div><span>业务场景</span><p>壁纸内容运营 · 素材质量判断</p></div><div><span>个人负责</span><p>评级维度、Prompt 迭代、评测与批跑框架</p></div><div><span>已完成</span><p>可复现评测流程、对比报告与分维度优化</p></div></aside>
 <article class="featured-case">
 <h2>从业务规则到模型判断</h2>
 <figure class="proj-img"><img class="lightbox-trigger" src="assets/img/wallpaper-workflow.svg" alt="业务规则拆解、评级维度、提示词设计、批量评测、错误归因与迭代复测的完整工作链路"><figcaption>个人工作链路示意。</figcaption></figure>
@@ -51,16 +51,16 @@
 <p>生成可复核的 HTML 报告和 AI / 人工对比表，支撑运营与审核判断。</p>
 </div>
 </div>
-<h2>减少误判，让自动化判断更可靠</h2>
+<h2>关键选择：让模型优化服从业务要求</h2><div class="case-grid"><div><span>把业务规则拆成可判断的维度</span><p>围绕题材与分发要求定义任务边界，而非让模型笼统判断“好不好”；通过人工标注和正反例对齐业务标准。</p></div><div><span>同时检查漏放与误伤</span><p>准确率之外，结合 Precision、Recall 与错误案例判断优化方向，避免为了降低误伤而使某个维度失去识别作用。</p></div><div><span>固定样本，控制单次改动</span><p>锁定基准样本、报告和 Prompt 版本，小步修改后在同样本上重跑，让前后差异能对应到具体调整。</p></div><div><span>为复核而设计输出</span><p>将 AI 与人工判断放在可检查的 HTML 报告和对比表中，支持定位错误原因与后续迭代。</p></div></div><h2>减少误判，让自动化判断更可靠</h2>
 <p>在已有准确率基础上，结合错误案例分析与 Prompt 迭代，进一步减少模型判断错误。</p>
 <div class="error-chart"><p class="chart-key">错误率（越低越好） · 灰色：迭代前 / 橄榄色：迭代后</p><div class="error-row"><h3>低质卡通动漫<span>错误率相对下降约 55%</span></h3><div class="error-bar"><i style="width:91.67%"></i><span>迭代前 11%</span></div><div class="error-bar improved"><i style="width:41.67%"></i><span>迭代后 5%</span></div></div><div class="error-row"><h3>不予分发<span>错误率相对下降约 80%</span></h3><div class="error-bar"><i style="width:41.67%"></i><span>迭代前 5%</span></div><div class="error-bar improved"><i style="width:8.33%"></i><span>迭代后 1%</span></div></div><div class="error-row"><h3>定向分发<span>错误率相对下降约 83%</span></h3><div class="error-bar"><i style="width:25.00%"></i><span>迭代前 3%</span></div><div class="error-bar improved"><i style="width:4.17%"></i><span>迭代后 0.5%</span></div></div></div><div class="table-scroll"><table><caption>准确率原始结果与错误率变化</caption><thead><tr><th>评级维度</th><th>准确率变化</th><th>错误率变化</th><th>错误率相对下降</th></tr></thead><tbody><tr><td>低质卡通动漫</td><td>89% → 95%</td><td>11% → 5%</td><td>约 55%</td></tr><tr><td>不予分发</td><td>95% → 99%</td><td>5% → 1%</td><td>约 80%</td></tr><tr><td>定向分发</td><td>97% → 99.5%</td><td>3% → 0.5%</td><td>约 83%</td></tr></tbody></table></div><p class="viz-note">错误率按 1 − 准确率计算；相对降幅按（迭代前错误率 − 迭代后错误率）÷ 迭代前错误率计算。它表示评测中的判断错误，不等同于业务误伤率。前后比较以一致样本与统计口径为前提。</p>
-<p class="viz-note">另据经历记录，全局误伤降至 0.5%。不同维度使用各自评测口径，不合并为单一整体准确率。公开资料未列出样本量、统计周期与完整分母，因此以上仅作为项目记录结果，不推断线上全量效果。</p>
+<p class="viz-note">项目评测中，全局误伤降至 0.5%。各维度独立计算，不合并为单一整体准确率；以上结果限于项目评测，不代表线上全量效果。本页未展示评测样本量与完整统计周期。</p>
 </article>
 <article class="proj-item">
 <h2>另一项实践：Push 实验分析</h2>
 <p>比较免费主题池与付费资源下发的应用率、CTR，并检查实验分流是否有效。</p>
 <p>实验窗口内，实验组日均应用率约 0.0034%，对照组约 0.0023%，相对差异约 +48%；CTR 约为 0.34% 与 0.42%。</p>
-<p class="viz-note">该结果属于独立的 Push 实验，不是壁纸评级的业务提升。部分日期计划未生效、分流偏斜，需要切分窗口解读；不能把观察到的组间差异直接认定为因果效果。公开记录未提供置信区间与显著性结论。</p>
+<p class="viz-note">该结果属于独立的 Push 实验，不是壁纸评级的业务提升。部分日期计划未生效、分流偏斜，需要切分窗口解读；不能把观察到的组间差异直接认定为因果效果。本页仅展示观察结果，未作统计显著性结论。</p>
 </article>
 <footer class="footer" id="contact">
 <p class="f-title">
